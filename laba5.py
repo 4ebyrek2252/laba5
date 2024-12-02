@@ -1,24 +1,24 @@
-# def my_function(name):
-#     print(f"npивет,{name}")
-# my_function("Абоба")
+def my_function(name):  #печатает приветственное сообщение с именем
+    print(f"npивет,{name}")
+my_function("Абоба") #пример вызова функции
 
 
-class Location:
+class Location: #класс представляющий местоположение автомобиля
     def __init__(self, marka, model):
-      self.marka = marka
-      self.model = model
+      self.marka = marka #марка
+      self.model = model #модель
 person1 = Location("Porsche", 911)
-print(person1.marka)
-print(person1.model)
+print(person1.marka) #выводит марку автомобиля
+print(person1.model) #выводит модель автомобиля
 
 
-class Car(Location):
-    def __init__(self, marka, model, years):
+class Car(Location): #класс представляющий автомобиль который наследует от класса Location
+    def __init__(self, marka, model, years): #марка, модель и год
         super().__init__ (marka, model)
         self.years = years
 
-    def describe(self):
+    def describe(self): #возвращает описание автомобиля
         return f" Я жертва Саши Куралёва, он украл меня на {self.marka} {self.model}. Это произошло в {self.years} году"
 
-car1 = Car("Порш", 911, 2021)
-print(car1.describe())
+car1 = Car("Порш", 911, 2021) #создание экземпляра класса car
+print(car1.describe()) #выводит описание car
